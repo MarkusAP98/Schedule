@@ -1,7 +1,8 @@
 // ClickableButton.js
 import React, { useState } from "react";
 
-function ClickableButton() {
+
+function ClickableButton({text}) {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
@@ -10,9 +11,10 @@ function ClickableButton() {
 
   const buttonClassName = isClicked ? "static-card" : "card";
 
+  
   return (
-    <button className={buttonClassName} onClick={handleClick}>
-      10
+      <button className={buttonClassName} onClick={handleClick}>
+        {text}
     </button>
   );
 }

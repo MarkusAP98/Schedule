@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ClickableButton from "./components/ClickableBtns";
 
 export default function App() {
+
   return (
     <div className="place-content-center p-40 m-60 shadow-xl">
       <h1 className="text-5xl font-extrabold">October 2023</h1>
@@ -18,13 +19,13 @@ export default function App() {
         </ul>
       </div>
       <div className="flex justify-between">
-        <ClickableButton />
-        <ClickableButton />
-        <ClickableButton />
-        <ClickableButton />
-        <ClickableButton />
-        <ClickableButton />
-        <ClickableButton />
+        <ClickableButton text="1" />
+        <ClickableButton text="1" />
+        <ClickableButton text="1" />
+        <ClickableButton text="1" />
+        <ClickableButton text="1" />
+        <ClickableButton text="1" />
+        <ClickableButton text="1" />
       </div>
     </div>
   );
