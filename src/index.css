@@ -9,4 +9,10 @@
     .static-card {
         @apply rounded-full w-10 h-10 m-5 translate-y-1 scale-110 bg-sky-500 text-white
     }
+    .static-card-P {
+            @apply px-4 p-2
+    }
+    .card-P {
+        @apply bg-sky-500 px-4 p-2 rounded-xl text-white
+    }
 }
