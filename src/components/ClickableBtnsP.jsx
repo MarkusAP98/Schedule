@@ -1,13 +1,14 @@
+// ClickableButton.js
 import React, { useState } from "react";
 
-function ColoredClickableBtn({ text }) {
+function ClickableButtonsP({ text }) {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
     setIsClicked(!isClicked);
   };
 
-  const buttonClassName = isClicked ? "static-card" : "blue-card";
+  const buttonClassName = isClicked ? "card-P" : "static-card-P";
 
   return (
     <button className={buttonClassName} onClick={handleClick}>
@@ -16,4 +17,4 @@ function ColoredClickableBtn({ text }) {
   );
 }
 
-export default ColoredClickableBtn;
+export default ClickableButtonsP;
