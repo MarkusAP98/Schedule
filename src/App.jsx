@@ -1,5 +1,4 @@
 import ClickableButton from "./components/ClickableBtns";
-import ColoredClickableBtn from "./components/ColoredClickableBtn"
 
 export default function App() {
 
