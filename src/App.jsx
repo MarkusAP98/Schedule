@@ -1,82 +1,41 @@
-import ClickableButton from "./components/ClickableBtns";
+import React, { useState } from "react";
+import MyAvailability from "./components/MyAvailability";
+import OthersAvailability from "./OthersAvailability";
 
 export default function App() {
+  const [isDisplayed, setIsDisplayed] = useState("myAvailibility"); // Default to MyAvailability
+
+  const handleMyAvailabilityClick = () => {
+    setIsDisplayed("myAvailibility");
+  };
+
+  const handleOthersAvailabilityClick = () => {
+    setIsDisplayed("others");
+  };
 
   return (
-    <div className="place-content-center p-16 m-32 shadow-xl">
-      <h1 className="text-3xl font-bold text-orange-400 pb-14 text-center">
-        MY AVAILABILITY FOR 7 WEEKS
-      </h1>
-      <div className="flex justify-between">
-        <h2 className="text-center mt-7 font-bold">Week 1</h2>
-        <ClickableButton text="Mon" />
-        <ClickableButton text="Tue" />
-        <ClickableButton text="Wed" />
-        <ClickableButton text="Thu" />
-        <ClickableButton text="Fri" />
-        <ClickableButton text="Sat" />
-        <ClickableButton text="Sun" />
-      </div>
-      <div className="flex justify-between">
-        <h2 className="text-center mt-7 font-bold">Week 2</h2>
-        <ClickableButton text="Mon" />
-        <ClickableButton text="Tue" />
-        <ClickableButton text="Wed" />
-        <ClickableButton text="Thu" />
-        <ClickableButton text="Fri" />
-        <ClickableButton text="Sat" />
-        <ClickableButton text="Sun" />
-      </div>
-      <div className="flex justify-between">
-        <h2 className="text-center mt-7 font-bold">Week 3</h2>
-        <ClickableButton text="Mon" />
-        <ClickableButton text="Tue" />
-        <ClickableButton text="Wed" />
-        <ClickableButton text="Thu" />
-        <ClickableButton text="Fri" />
-        <ClickableButton text="Sat" />
-        <ClickableButton text="Sun" />
-      </div>
-      <div className="flex justify-between">
-        <h2 className="text-center mt-7 font-bold">Week 4</h2>
-        <ClickableButton text="Mon" />
-        <ClickableButton text="Tue" />
-        <ClickableButton text="Wed" />
-        <ClickableButton text="Thu" />
-        <ClickableButton text="Fri" />
-        <ClickableButton text="Sat" />
-        <ClickableButton text="Sun" />
-      </div>
-      <div className="flex justify-between">
-        <h2 className="text-center mt-7 font-bold">Week 5</h2>
-        <ClickableButton text="Mon" />
-        <ClickableButton text="Tue" />
-        <ClickableButton text="Wed" />
-        <ClickableButton text="Thu" />
-        <ClickableButton text="Fri" />
-        <ClickableButton text="Sat" />
-        <ClickableButton text="Sun" />
-      </div>
-      <div className="flex justify-between">
-        <h2 className="text-center mt-7 font-bold">Week 6</h2>
-        <ClickableButton text="Mon" />
-        <ClickableButton text="Tue" />
-        <ClickableButton text="Wed" />
-        <ClickableButton text="Thu" />
-        <ClickableButton text="Fri" />
-        <ClickableButton text="Sat" />
-        <ClickableButton text="Sun" />
-      </div>
-      <div className="flex justify-between">
-        <h2 className="text-center mt-7 font-bold">Week 7</h2>
-        <ClickableButton text="Mon" />
-        <ClickableButton text="Tue" />
-        <ClickableButton text="Wed" />
-        <ClickableButton text="Thu" />
-        <ClickableButton text="Fri" />
-        <ClickableButton text="Sat" />
-        <ClickableButton text="Sun" />
-      </div>
+    <div>
+      <button
+        className={`ml-5 cursor-pointer hover:underline ${
+          isDisplayed === "myAvailibility" ? "active" : ""
+        }`}
+        onClick={handleMyAvailabilityClick}
+      >
+        My Availability
+      </button>
+      <button
+        className={`ml-5 cursor-pointer hover:underline ${
+          isDisplayed === "others" ? "active" : ""
+        }`}
+        onClick={handleOthersAvailabilityClick}
+      >
+        Others Availability
+      </button>
+
+      {isDisplayed === "myAvailibility" && (
+        <MyAvailability className="myAvailibility" />
+      )}
+      {isDisplayed === "others" && <OthersAvailability className="others" />}
     </div>
   );
 }
