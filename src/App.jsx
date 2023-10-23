@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import MyAvailability from "./components/MyAvailability";
-import OthersAvailability from "./OthersAvailability";
+import CompatibleSchedule from "./CompatibleSchedule";
 
 export default function App() {
   const [isDisplayed, setIsDisplayed] = useState("myAvailibility"); // Default to MyAvailability
@@ -29,13 +29,13 @@ export default function App() {
         }`}
         onClick={handleOthersAvailabilityClick}
       >
-        Others Availability
+       Compatible Availability
       </button>
 
       {isDisplayed === "myAvailibility" && (
         <MyAvailability className="myAvailibility" />
       )}
-      {isDisplayed === "others" && <OthersAvailability className="others" />}
+      {isDisplayed === "others" && <CompatibleSchedule className="others" />}
     </div>
   );
 }
