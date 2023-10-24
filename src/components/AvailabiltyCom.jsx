@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ClickableButtonsP from "./ClickableBtnsP";
+ import { BiSolidUser } from "react-icons/bi";
 
 const AvailabiltyCom = ({ selectedWeek, handleWeekChange }) => {
   return (
@@ -25,6 +26,18 @@ const AvailabiltyCom = ({ selectedWeek, handleWeekChange }) => {
             <option value={7}>Week 7</option>
           </select>
         </form>
+      </div>
+      <div>
+        <div className="flex bg-blue-100 p-5 m-5 rounded-t-lg justify-between">
+          <h3 className="ml-10">Friends</h3>
+          <h3>Availability</h3>
+          <h3 className="mr-10">Action Options</h3>
+        </div>
+        <div>
+          <div>
+            <BiSolidUser />
+          </div>
+        </div>
       </div>
     </div>
   );

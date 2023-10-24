@@ -19,19 +19,7 @@ const CompatibleSchedule = () => {
           </button>
         </div>
         <AvailabilityCom />
-        <div>
-          <div className="flex bg-blue-100 p-5 m-5 rounded-t-lg justify-between">
-            <h3 className="ml-10">Friends</h3>
-            <h3>Availability</h3>
-            <h3 className="mr-10">Action Options</h3>
-          </div>
-          <div className="flex">
-            <div className="flex">
-              <CgProfile className="text-4xl"></CgProfile>
-              <h1 className="font-semibold m-2">Profile</h1>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
