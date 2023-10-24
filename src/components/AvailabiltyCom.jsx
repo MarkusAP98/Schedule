@@ -13,7 +13,7 @@ const AvailabiltyCom = ({ selectedWeek, handleWeekChange }) => {
   return (
     <div>
       <div className="flex justify-between pl-10 pr-10 p-5 border-solid border-2 border-gray-500 rounded-lg m-10">
-        <h2 className="">Availability</h2>
+        <h2 className="mt-3">Availability</h2>
         <button
           onClick={() => changeComponent("All")}
           className={
@@ -38,15 +38,15 @@ const AvailabiltyCom = ({ selectedWeek, handleWeekChange }) => {
         >
           Next Week
         </button>
-        <form className="">
+        <form className="mt-3">
           <label className="mr-2">Select:</label>
           <select
             value={selectedWeek}
             onChange={handleWeekChange}
             className="border-solid border-gray-400 border-2 rounded-lg"
           >
-            <option value={1}>Week 1</option>
-            <option value={2}>Week 2</option>
+            <option value='ThisWeek'>Week 1</option>
+            <option value='NextWeek'>Week 2</option>
             <option value={3}>Week 3</option>
             <option value={4}>Week 4</option>
             <option value={5}>Week 5</option>
