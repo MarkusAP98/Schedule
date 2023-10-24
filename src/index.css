@@ -15,4 +15,10 @@
     .card-P {
         @apply bg-sky-500 px-4 p-2 rounded-xl text-white
     }
+    .active-button {
+        @apply bg-sky-500 p-3 rounded-xl text-white
+    }
+    .inactive-button {
+        @apply p-3
+    }
 }

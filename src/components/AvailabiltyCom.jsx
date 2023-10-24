@@ -5,25 +5,38 @@ import ThisWeek from "./AvailabilityComps/ThisWeek";
 
 const AvailabiltyCom = ({ selectedWeek, handleWeekChange }) => {
   const [activeComponent, setActiveComponent] = useState("All");
+
   const changeComponent = (componentName) => {
     setActiveComponent(componentName);
   };
-  let activeContent;
-  if (activeComponent === "All") {
-    activeContent = <All />;
-  } else if (activeComponent === "ThisWeek") {
-    activeContent = <ThisWeek />;
-  } else if (activeComponent === "NextWeek") {
-    activeContent = <NextWeek />;
-  }
+
   return (
     <div>
       <div className="flex justify-between pl-10 pr-10 p-5 border-solid border-2 border-gray-500 rounded-lg m-10">
         <h2 className="">Availability</h2>
-        <button onClick={() => changeComponent("All")}>All</button>
-        <button onClick={() => changeComponent("ThisWeek")}>This Week</button>
-        <button onClick={() => changeComponent("NextWeek")}>
-          ThiNext Week
+        <button
+          onClick={() => changeComponent("All")}
+          className={
+            activeComponent === "All" ? "active-button" : "inactive-button"
+          }
+        >
+          All
+        </button>
+        <button
+          onClick={() => changeComponent("ThisWeek")}
+          className={
+            activeComponent === "ThisWeek" ? "active-button" : "inactive-button"
+          }
+        >
+          This Week
+        </button>
+        <button
+          onClick={() => changeComponent("NextWeek")}
+          className={
+            activeComponent === "NextWeek" ? "active-button" : "inactive-button"
+          }
+        >
+          Next Week
         </button>
         <form className="">
           <label className="mr-2">Select:</label>
@@ -48,7 +61,10 @@ const AvailabiltyCom = ({ selectedWeek, handleWeekChange }) => {
           <h3>Availability</h3>
           <h3 className="mr-10">Action Options</h3>
         </div>
-        {activeContent}
+        {/* Render the active component */}
+        {activeComponent === "All" && <All />}
+        {activeComponent === "ThisWeek" && <ThisWeek />}
+        {activeComponent === "NextWeek" && <NextWeek />}
       </div>
     </div>
   );

@@ -1,8 +1,12 @@
 import React from 'react'
+import Friends from '../Friends'
 
 const NextWeek = () => {
   return (
-    <div>NextWeek</div>
+    <div>
+    next
+      <Friends />
+    </div>
   )
 }
 
