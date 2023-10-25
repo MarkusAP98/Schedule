@@ -2,11 +2,12 @@
 import React, { useState } from "react";
 
 
-function ClickableButton({text}) {
+function ClickableButton({text, onClick, week}) {
   const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
-    setIsClicked(!isClicked);
+    setIsClicked(!isClicked); 
+    onClick(week);
   };
 
   const buttonClassName = isClicked ? "static-card" : "card";

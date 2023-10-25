@@ -1,14 +1,14 @@
 import React from 'react'
-import ClickableButton from "./ClickableBtns";
+import ClickableButton from "../ClickableBtns";
 
-const MyAvailability = () => {
-  const handleButtonClicked = (week, day) => {
-    console.log(`You clicked week ${week}, ${day}`);
-  }
+const Paul = () => {
+   const handleButtonClicked = (week, day) => {
+     console.log(`You clicked week ${week}, ${day}`);
+   };
   return (
     <div className="place-content-center p-16 m-32 shadow-xl">
       <h1 className="text-3xl font-bold text-orange-400 pb-14 text-center">
-        MY AVAILABILITY FOR 7 WEEKS
+        Paul's AVAILABILITY FOR 7 WEEKS
       </h1>
       <div className="flex justify-between">
         <h2 className="text-center mt-7 font-bold">Week 1</h2>
@@ -84,4 +84,4 @@ const MyAvailability = () => {
   );
 }
 
-export default MyAvailability
+export default Paul
