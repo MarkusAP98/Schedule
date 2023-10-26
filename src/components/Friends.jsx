@@ -17,7 +17,7 @@ const Friends = () => {
           <BiSolidUser className="text-2xl" />
           <h1 className="mt-1 ml-2">Markus</h1>
         </div>
-        <div>day</div>
+        <div>Week</div>
         <div className="flex mr-10 justify-between w-32 text-1xl">
           <AiFillEye />
           <BiPaperPlane />
