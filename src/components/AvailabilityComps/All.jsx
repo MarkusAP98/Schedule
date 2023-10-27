@@ -4,6 +4,7 @@ import Friends from "../Friends";
 const All = () => {
   return (
     <div>
+    all
     <Friends />
     </div>
   );
