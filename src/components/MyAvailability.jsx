@@ -1,9 +1,17 @@
 import React from "react";
 import ClickableButton from "./ClickableBtns";
 
-const MyAvailability = () => {
+// trying to send the week and day to the friends component when the button is clicked
+
+
+const MyAvailability = ({ setAvailabilityData }) => {
   const handleButtonClicked = (week, day) => {
     console.log(`You clicked week ${week}, ${day}`);
+    setAvailabilityData(prevData => {
+      const newdata = [...prevData];
+      newdata.push({ week, day });
+      return newdata;
+    })
   };
 
   return (
