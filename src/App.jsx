@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import MyAvailability from "./components/MyAvailability";
 import CompatibleSchedule from "./CompatibleSchedule";
-import Paul from "./components/OthersAvailability.jsx/Paul.jsx"
-;
-import Friends from './components/Friends'
+import Paul from "./components/OthersAvailability.jsx/Paul.jsx";
 
 export default function App() {
-  const [availabilityData, setAvailabilityData] = useState([]); 
+  const [availabilityData, setAvailabilityData] = useState([]);
   const [isDisplayed, setIsDisplayed] = useState("myAvailibility"); // Default to MyAvailability
 
   const handleMyAvailabilityClick = () => {
@@ -18,7 +16,7 @@ export default function App() {
   };
   const handlePaulAvailabilityClick = () => {
     setIsDisplayed("Paul");
-  }
+  };
   const handleButtonClicked = (week, day) => {
     console.log(`You clicked week ${week}, ${day}`);
   };
@@ -57,9 +55,13 @@ export default function App() {
           setAvailabilityData={setAvailabilityData}
         />
       )}
-      {isDisplayed === "others" && <CompatibleSchedule className="others" />}
+      {isDisplayed === "others" && (
+        <CompatibleSchedule
+          className="others"
+          availabilityData={availabilityData}
+        />
+      )}
       {isDisplayed === "Paul" && <Paul className="Paul" />}
-      <Friends availabilityData={availabilityData} />
     </div>
   );
 }

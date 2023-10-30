@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import AvailabilityCom from "./components/AvailabiltyCom";
 
-const CompatibleSchedule = () => {
-
+const CompatibleSchedule = ({ availabilityData }) => {
   return (
     <div className="flex-col p-20">
       <div className="border-solid border-2 border-gray-500 rounded-lg">
@@ -17,8 +16,7 @@ const CompatibleSchedule = () => {
             More serious
           </button>
         </div>
-        <AvailabilityCom />
-        
+        <AvailabilityCom availabilityData={availabilityData} />
       </div>
     </div>
   );

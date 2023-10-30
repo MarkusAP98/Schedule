@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import All from "./AvailabilityComps/All";
 import NextWeek from "./AvailabilityComps/NextWeek";
 import ThisWeek from "./AvailabilityComps/ThisWeek";
+import Friends from "./Friends";
 
-const AvailabiltyCom = ({ selectedWeek, handleWeekChange }) => {
+const AvailabiltyCom = ({
+  selectedWeek,
+  handleWeekChange,
+  availabilityData,
+}) => {
   const [activeComponent, setActiveComponent] = useState("All");
 
   const changeComponent = (componentName) => {
@@ -45,8 +50,8 @@ const AvailabiltyCom = ({ selectedWeek, handleWeekChange }) => {
             onChange={handleWeekChange}
             className="border-solid border-gray-400 border-2 rounded-lg"
           >
-            <option value='ThisWeek'>Week 1</option>
-            <option value='NextWeek'>Week 2</option>
+            <option value="ThisWeek">Week 1</option>
+            <option value="NextWeek">Week 2</option>
             <option value={3}>Week 3</option>
             <option value={4}>Week 4</option>
             <option value={5}>Week 5</option>
@@ -66,6 +71,7 @@ const AvailabiltyCom = ({ selectedWeek, handleWeekChange }) => {
         {activeComponent === "ThisWeek" && <ThisWeek />}
         {activeComponent === "NextWeek" && <NextWeek />}
       </div>
+      <Friends availabilityData={availabilityData} />
     </div>
   );
 };

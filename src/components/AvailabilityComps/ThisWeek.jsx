@@ -4,7 +4,7 @@ import Friends from '../Friends'
 const ThisWeek = () => {
   return (
     <div>
-    
+    this week
       <Friends />
     </div>
   )
