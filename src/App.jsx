@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import MyAvailability from "./components/MyAvailability";
 import CompatibleSchedule from "./CompatibleSchedule";
 import Paul from "./components/OthersAvailability.jsx/Paul.jsx";
-import Friends from "./components/Friends";
 
 export default function App() {
   const [availabilityData, setAvailabilityData] = useState([]);
@@ -63,7 +62,6 @@ export default function App() {
         />
       )}
       {isDisplayed === "Paul" && <Paul className="Paul" />}
-      {/* <Friends availabilityData={availabilityData} /> */}
     </div>
   );
 }
