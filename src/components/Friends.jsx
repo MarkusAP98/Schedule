@@ -12,7 +12,25 @@ import { BiPaperPlane } from "react-icons/bi";
 const Friends = ({ availabilityData }) => {
   if (!availabilityData) {
     // If availabilityData is undefined, you can return a message or placeholder here.
-    return <p>No availability data available.</p>;
+    return (
+      <>
+        <div className="p-5 pl-7 pt-0 flex justify-between">
+          <div className="flex ml-10">
+            <GoDotFill className="text-green-500 relative left-2 " />
+            <BiSolidUser className="text-2xl" />
+            <h1 className="mt-1 ml-2">Markus</h1>
+          </div>
+          <div>Week 0, Day 0</div>
+          <div className="flex mr-10 justify-between w-32 text-1xl">
+            <AiFillEye />
+            <BiPaperPlane />
+            <AiOutlineMail />
+            <AiTwotoneMessage />
+            <AiOutlineUser />
+          </div>
+        </div>
+      </>
+    );
   }
 
   return (
