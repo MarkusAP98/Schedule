@@ -15,7 +15,7 @@ const MyAvailability = ({ setAvailabilityData }) => {
   };
 
   return (
-    <div className="place-content-center p-1 m-5 md:m-14 xl:mx-48 shadow-xl">
+    <div className="place-content-center p-1 m-5 md:m-24 xl:mx-72 2xl:my-36 shadow-xl">
       <h1 className="text-lg xl:text-3xl font-bold text-orange-400 py-4 text-center">
         MY AVAILABILITY FOR 7 WEEKS
       </h1>

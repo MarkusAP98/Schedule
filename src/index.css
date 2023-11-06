@@ -4,10 +4,10 @@
 
 @layer components {
     .card {
-        @apply rounded-full h-5  transition ease-in-out delay-100 md:hover:scale-110 md:hover:bg-sky-500 duration-300 md:hover:text-white text-xs
+        @apply rounded-full transition ease-in-out delay-100 md:hover:scale-110 md:hover:bg-sky-500 duration-300 md:hover:text-white text-xs h-8 w-8 lg:w-8 lg:h-8
     }
     .static-card {
-        @apply rounded-full h-5 scale-110 bg-sky-500 text-white text-xs
+        @apply rounded-full h-8 w-8 scale-110 bg-sky-500 text-white text-xs lg:w-8 lg:h-8
     }
     .static-card-P {
             @apply px-4 p-2
