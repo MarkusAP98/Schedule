@@ -43,7 +43,7 @@ const Friends = ({ availabilityData }) => {
               <h1 className="mt-1 ml-2">{entry.name}</h1>
             </div>
             <div>
-              Week {entry.week}, Day {entry.day}
+              Week {entry.week},{entry.day}
             </div>
             <div className="flex mr-10 justify-between w-32 text-1xl">
               <AiFillEye />
