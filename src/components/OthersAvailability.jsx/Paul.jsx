@@ -1,9 +1,7 @@
 import React from "react";
 import ClickableButton from "../ClickableBtns";
 
-// trying to send the week and day to the friends component when the button is clicked
-
-const MyAvailability = ({ setAvailabilityData }) => {
+const Paul = ({ setAvailabilityData }) => {
   const handleButtonClicked = (week, day) => {
     console.log(`You clicked week ${week}, ${day}`);
     setAvailabilityData((prevData) => {
@@ -14,9 +12,9 @@ const MyAvailability = ({ setAvailabilityData }) => {
   };
 
   return (
-    <div className="place-content-center p-1 m-5 md:m-14 xl:mx-48 2xl:my-36 shadow-xl">
+    <div className="place-content-center p-1 m-5 md:m-24 xl:mx-72 2xl:my-36 shadow-xl">
       <h1 className="text-lg xl:text-3xl font-bold text-orange-400 py-4 text-center">
-        MY AVAILABILITY FOR 7 WEEKS
+        PAUL'S AVAILABILITY FOR 7 WEEKS
       </h1>
       {[1, 2, 3, 4, 5, 6, 7].map((week) => (
         <div className="flex justify-between p-3" key={week}>
@@ -36,6 +34,4 @@ const MyAvailability = ({ setAvailabilityData }) => {
   );
 };
 
-export default MyAvailability;
-
-
+export default Paul;

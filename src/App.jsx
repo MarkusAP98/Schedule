@@ -61,7 +61,13 @@ export default function App() {
           availabilityData={availabilityData}
         />
       )}
-      {isDisplayed === "Paul" && <Paul className="Paul" />}
+      {isDisplayed === "Paul" && (
+        <Paul
+          className="Paul"
+          onButtonClicked={handleButtonClicked}
+          setAvailabilityData={setAvailabilityData}
+        />
+      )}
     </div>
   );
 }
