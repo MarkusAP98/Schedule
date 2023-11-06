@@ -15,8 +15,8 @@ const MyAvailability = ({ setAvailabilityData }) => {
   };
 
   return (
-    <div className="place-content-center p-1 m-1 shadow-xl">
-      <h1 className="text-lg font-bold text-orange-400 py-4 text-center">
+    <div className="place-content-center p-1 m-5 md:m-14 xl:mx-48 shadow-xl">
+      <h1 className="text-lg xl:text-3xl font-bold text-orange-400 py-4 text-center">
         MY AVAILABILITY FOR 7 WEEKS
       </h1>
       {[1, 2, 3, 4, 5, 6, 7].map((week) => (

@@ -17,7 +17,7 @@ const AvailabiltyCom = ({
 
   return (
     <div>
-      <div className="flex justify-between border-solid border-2 border-gray-500 rounded-lg ">
+      <div className="flex justify-between border-solid border-2 border-gray-500 rounded-lg m-2">
         <h2 className="mt-3">Availability</h2>
         <button
           onClick={() => changeComponent("All")}

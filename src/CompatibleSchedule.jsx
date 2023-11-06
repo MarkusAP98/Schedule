@@ -3,7 +3,7 @@ import AvailabilityCom from "./components/AvailabiltyCom";
 
 const CompatibleSchedule = ({ availabilityData }) => {
   return (
-    <div className="flex-col pt-10">
+    <div className="flex-col pt-10 md:m-16 lg:w-100 xl:m-44">
       <div className="border-solid border-2 border-gray-500 rounded-lg">
         <h1 className="font-bold text-3xl text-orange-400 text-center mt-5">
           FRIEND'S
