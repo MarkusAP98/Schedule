@@ -1,5 +1,5 @@
 import React from "react";
-import ClickableButton from "./ClickableBtns";
+import ClickableButton from "../ClickableBtns";
 
 // trying to send the week and day to the friends component when the button is clicked
 
