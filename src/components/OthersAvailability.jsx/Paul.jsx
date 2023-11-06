@@ -14,13 +14,13 @@ const MyAvailability = ({ setAvailabilityData }) => {
   };
 
   return (
-    <div className="place-content-center p-16 m-32 shadow-xl">
-      <h1 className="text-3xl font-bold text-orange-400 pb-14 text-center">
+    <div className="place-content-center p-1 m-5 md:m-14 xl:mx-48 2xl:my-36 shadow-xl">
+      <h1 className="text-lg xl:text-3xl font-bold text-orange-400 py-4 text-center">
         MY AVAILABILITY FOR 7 WEEKS
       </h1>
       {[1, 2, 3, 4, 5, 6, 7].map((week) => (
-        <div className="flex justify-between" key={week}>
-          <h2 className="text-center mt-7 font-bold">Week {week}</h2>
+        <div className="flex justify-between p-3" key={week}>
+          <h2 className="text-center text-xs font-bold">Week {week}</h2>
           {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map((day) => (
             <ClickableButton
               key={day}
@@ -37,3 +37,5 @@ const MyAvailability = ({ setAvailabilityData }) => {
 };
 
 export default MyAvailability;
+
+
